@@ -1,0 +1,75 @@
+body {
+    background-image: linear-gradient(255deg, #e9defa 0%, #fbfcdb 100%);
+}
+#top {
+    height: 180px;
+    color: rgb(0, 0, 0);
+    font-size: 1.2cm;
+    text-align: center;
+    line-height: 180px;
+}
+img {
+    height: 180px;
+    border-radius: 10px;
+}
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 2px;
+    box-sizing: border-box;
+}
+table {
+    width: 90%;
+    float: right;
+    margin: 20px;
+}
+#logout,
+#back {
+    position: relative;
+    left: 95%;
+    padding: 5px 15px;
+    background: rgb(241, 243, 219);
+    border: 0 none;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    border: 3px rgb(93, 76, 102) double;
+}
+#logout:hover,
+#back:hover {
+    background-color: rgb(87, 65, 107);
+    color: rgb(255, 255, 255);
+    border: 3px rgb(255, 255, 255) double;
+}
+#sem {
+    width: 65px;
+    height: 25px;
+    background: rgb(255, 248, 189);
+    color: rgb(63, 49, 23);
+}
+#search {
+    width: 60px;
+    height: 26px;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 66, 87);
+}
+#search:hover {
+    color: rgb(255, 255, 255);
+    background: #5560ff;
+    border: 0 none;
+}
+#Code {
+    width: 200px;
+    height: 20px;
+}
+#left {
+    width: 300px;
+    float: left;
+    border-right: 0px;
+}
+#right {
+    width: 1200px;
+    float: right;
+}

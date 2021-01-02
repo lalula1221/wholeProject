@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="管理員.css" />
+        <title>管理員系統</title>
+        <style>
+            .divv {
+                border: 3px solid rgb(158, 129, 175);
+                border-radius: 12px;
+                margin: 10px;
+                padding: 10px;
+                background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+                color: rgb(83, 73, 53);
+            }
+        </style>
+    </head>
+    <body style="background-image: linear-gradient(255deg, #ffffff 0%, #ffffff 100%);">
+        <div id = "top">
+            <p>
+                管理員
+                <a href="管理員.html"
+                ><img src="管理員.jpg" alt="管理員" title="I am administrator." style="float: right, margin= 15px"
+            /></a>
+            </p>
+        </div>
+        <input type="button" id="logout" value="登出" onclick="location.href='..\\首頁.html'" />
+        <hr />
+        <br />
+        <div id="div1" class="divv" onclick="location.href='新增_修改_刪除帳號.html'">帳號</div>
+        <!--YES-->
+        <div id="div2" class="divv" onclick="location.href='修改使用者個人資料.html'">使用者資料</div>
+        <!--YES-->
+        <div id="div3" class="divv" onclick="location.href='關於某學生選修課程.html'">選修課程</div>
+        <!--YES-->
+        <div id="div4" class="divv" onclick="location.href='查詢_修改學生成績.html'">學生成績</div>
+        <!--YES-->
+        <div id="div5" class="divv" onclick="location.href='新增_修改_刪除特定學期的課程資訊.html'">課程資訊</div>
+        <!--YES-->
+        <!--代碼、名稱、學分、授課教授和類型(必修/選修)-->
+        <div id="div6" class="divv" onclick="location.href='列出某課程的選修學生清單.html'">選修清單</div>
+        <!--YES-->
+        <div id="div7" class="divv" onclick="location.href='產生每位學生的成績單.html'">成績單</div>
+        <!--YES-->
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>學生</title>
+        <link rel="stylesheet" href="學生.css" />
+        <style>
+            nav a {
+                font-size: 1.2rem;
+                display: block;
+                padding: 10px;
+                color: inherit;
+                text-decoration: none;
+            }
+            nav > ul {
+                background-color: rgb(230, 230, 230);
+                margin: 0;
+                border-radius: 5px;
+            }
+            nav a:hover {
+                background-color: rgb(115, 115, 115);
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <br />
+        <div>
+            <p>
+                學生
+                <a href="學生.html"
+                    ><img src="學生.jpg" alt="學生" title="I am Student." style="float: right, margin= 15px"
+                /></a>
+            </p>
+        </div>
+        <input type="button" value="登出" id="logout" onclick="location.href='..\\首頁.html'" />
+        <hr />
+        <nav>
+            <ul>
+                <li><a href="列出自己所上的課程.html">按學期列出自己所上的課程及內容</a></li>
+                <li><a href="列出某課程的選修學生.html">列出某課程的選修學生</a></li>
+                <li><a href="按學期列出課程清單.html">按學期列出課程清單</a></li>
+                <li><a href="列印成績單.html">列印成績單</a></li>
+                <li><a href="修改密碼.html">修改密碼</a></li>
+            </ul>
+        </nav>
+    </body>
+</html>

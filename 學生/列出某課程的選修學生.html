@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <script src="jquery-1.4.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>課程的選修學生</title>
+        <link rel="stylesheet" href="學生.css" />
+    </head>
+    <script>
+        $(document).ready(function () {
+            $('#Search').click(function () {
+                $('.added').remove();
+                $.post('列出某課程的選修學生.php', $('form').serialize(), function (data) {
+                    if (data == 'error1') {
+                        alert('本學期沒有這門課');
+                    } else if (data == 'error2') {
+                        alert('沒有選修的學生');
+                    } else {
+                        Data = JSON.parse(data);
+                        let th1 = $('<th>').text('姓名');
+                        let th2 = $('<th>').text('學號');
+                        let tr1 = $('<tr>').append(th1, th2).attr('class', 'added');
+                        $('table').append(tr1);
+                        for (let index = 0; index < Data.length; index++) {
+                            let td1 = $('<td>').text(Data[index][0]);
+                            let td2 = $('<td>').text(Data[index][1]);
+                            let tr2 = $('<tr>').append(td1, td2).attr('class', 'added');
+                            $('table').append(tr2);
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+    <body>
+        <div>
+            <p>
+                學生
+                <a href="學生.html"
+                    ><img
+                        src="學生.jpg"
+                        alt="學生"
+                        title="I am Student."
+                        height="180"
+                        style="float: right, margin= 15px"
+                /></a>
+            </p>
+        </div>
+        <input type="button" id="logout" value="返回" onclick="location.href='學生.html'" />
+        <hr />
+        <form>
+            <select name="Sem" id="Sem" class="Sem">
+                <option selected>109上</option>
+                <option>109下</option>
+                <option>110上</option>
+            </select>
+            <input type="text" name="Code" id="Code" placeholder="請輸入課程代碼" />
+            <input type="button" id="Search" value="查詢" />
+            <table></table>
+        </form>
+    </body>
+</html>
